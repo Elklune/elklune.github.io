@@ -13,7 +13,7 @@
   /* Búsqueda segura: solo devuelve elementos de nuestras listas, nunca propiedades internas
      de JavaScript (así #constructor o #toString no rompen nada). */
   function find(list, id) {
-    for (var i = 0; i < list.length; i++) if (list[i].id === id) return list[i];
+    for (var i = 0; i < list.length; i++) if (list[i].id === id || list[i].alias === id) return list[i];
     return null;
   }
 
@@ -64,7 +64,7 @@
     return {
       title: s.title + ' · Starafk',
       html: bar(s.id) +
-        '<article class="card"><h1>' + esc(s.title) + '</h1><p>' + esc(s.intro) + '</p>' +
+        '<article class="card"><h1>' + esc(s.title) + '</h1>' + (s.intro ? '<p>' + esc(s.intro) + '</p>' : '') +
         (s.html || '<p><span aria-hidden="true">🚧</span> Sección en construcción.</p>') + '</article>'
     };
   }

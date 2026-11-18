@@ -31,8 +31,8 @@
           dim = SF.art.dims[design],
           layer = i % 2 ? 'k' : 'f';
       out += '<svg class="tr" style="' + edge + ':' + x + 'px;bottom:' + bottom + 'px"' +
-        ' width="' + Math.round(dim[0] * s * 0.7 * fat) + '" height="' + dim[1] * s * 2 + '"' +
-        ' viewBox="0 0 ' + dim[0] + ' ' + dim[1] + '" preserveAspectRatio="none" aria-hidden="true" focusable="false">' +
+        ' width="' + Math.round(dim.wu * s * fat) + '" height="' + Math.round(dim.hu * s) + '"' +
+        ' viewBox="0 0 ' + dim.vw + ' ' + dim.vh + '" preserveAspectRatio="none" aria-hidden="true" focusable="false">' +
         '<use href="#t-' + design + treeType(i + shift, ice) + layer + '"/></svg>';
     }
     return out;

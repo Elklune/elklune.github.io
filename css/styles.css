@@ -1,12 +1,12 @@
 /* Starafk · estilos */
 
-/* Fuentes alojadas en este mismo sitio (ver fonts/LEEME.txt). Licencia SIL OFL 1.1. */
+/* Fuentes alojadas en este mismo sitio (carpeta fonts/). Licencia SIL OFL 1.1: ver fonts/LICENCIA-FUENTES.txt */
 @font-face {
   font-family: "Press Start 2P";
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url("../fonts/press-start-2p-latin-400-normal.woff2") format("woff2"),
+  src: url("../fonts/PressStart2P-Regular.woff") format("woff"),
        url("../fonts/PressStart2P-Regular.ttf") format("truetype");
 }
 @font-face {
@@ -14,7 +14,7 @@
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url("../fonts/vt323-latin-400-normal.woff2") format("woff2"),
+  src: url("../fonts/VT323-Regular.woff") format("woff"),
        url("../fonts/VT323-Regular.ttf") format("truetype");
 }
 
@@ -29,7 +29,6 @@
   color-scheme: light;
   box-sizing: border-box;
   padding-top: env(safe-area-inset-top, 0px);
-  padding-bottom: env(safe-area-inset-bottom, 0px);
 }
 html { scroll-padding-top: env(safe-area-inset-top, 0px); height: 100%; background: #14213d; }
 *, *::before, *::after { box-sizing: border-box; }
@@ -49,19 +48,19 @@ a:focus-visible { outline: 3px solid var(--blue); outline-offset: 3px; }
 #sky { background: linear-gradient(#0a1030, #1b2a5e 55%, #3b5a9a); }
 #stars { position: absolute; top: 10px; left: 10px; width: 3px; height: 3px; background: #fff; }
 #ground { position: absolute; left: 0; right: 0; bottom: 0; height: 44px; background: #eaf4ff; border-top: 8px solid #fff; box-shadow: 0 -8px 0 0 #cfe3f7 inset; }
-#forest svg { display: block; shape-rendering: crispEdges; }
+#forest svg { display: block; shape-rendering: geometricPrecision; }
 .tr { position: absolute; }
 .f { position: absolute; top: -10px; background: #fff; animation: fall linear infinite; will-change: transform; }
 @keyframes fall { 0% { transform: translate(0, -10px); } 50% { transform: translate(14px, 55vh); } 100% { transform: translate(-6px, 108vh); } }
 @media (prefers-reduced-motion: reduce) { .f { animation: none; display: none; } }
 
 /* ---------- estructura ---------- */
-.wrap { position: relative; z-index: 2; }
-header { text-align: center; padding: 44px 16px 20px; }
+.wrap { position: relative; z-index: 2; min-height: 100vh; min-height: 100dvh; display: flex; flex-direction: column; }
+header { flex: none; text-align: center; padding: 44px 16px 20px; }
 .logo { display: inline-block; font-size: clamp(1.6rem, 8vw, 2.8rem); color: #fff; text-shadow: 4px 4px 0 var(--red), 8px 8px 0 var(--ink); text-decoration: none; letter-spacing: 2px; }
 .logo b { color: var(--gold); font-weight: 400; }
-.tag { display: inline-block; margin-top: 0; color: #bfe0ff; text-shadow: 2px 2px 0 var(--ink); font-size: 1.15rem; }
-main { max-width: 980px; margin: 0 auto; padding: 12px 16px 110px; }
+.tag { display: inline-block; margin-top: 0; color: #bfe0ff; text-shadow: 2px 2px 0 var(--ink); font-size: 1.35rem; }
+main { width: 100%; max-width: 980px; flex: 1 0 auto; margin: 0 auto; padding: 12px 16px 40px; }
 
 /* ---------- barra de navegación ---------- */
 .bar { display: flex; align-items: center; justify-content: space-between; gap: 10px; background: var(--card); border: 4px solid var(--ink); box-shadow: 8px 8px 0 var(--ink), 0 0 0 3px #fff, inset 0 0 0 3px #cfe3f7; padding: 8px 22px; margin-bottom: 36px; }
@@ -71,10 +70,10 @@ main { max-width: 980px; margin: 0 auto; padding: 12px 16px 110px; }
 .lk::-webkit-scrollbar { display: none; }
 .lk a:first-child { margin-left: auto; }
 .lk a:last-child { margin-right: auto; }
-.bar a { display: inline-flex; align-items: center; flex: none; min-height: 44px; padding: 0 10px; font-size: .7rem; white-space: nowrap; color: var(--ink); text-decoration: none; border: 3px solid transparent; }
+.bar a { display: inline-flex; align-items: center; flex: none; min-height: 44px; padding: 0 5px; font-size: .78rem; white-space: nowrap; color: var(--ink); text-decoration: none; border: 3px solid transparent; }
 .bar a:hover { background: var(--gold); border-color: var(--ink); }
 .bar a.on { background: var(--blue); color: #fff; border-color: var(--ink); }
-@media (max-width: 560px) { .sh svg { width: 26px; height: auto; } .bar { padding: 6px 10px; } }
+@media (max-width: 560px) { .sh svg { width: 32px; height: auto; } .bar { padding: 6px 10px; } }
 
 /* ---------- portada ---------- */
 .cols { display: grid; grid-template-columns: 1fr 1.3fr; gap: 26px; align-items: stretch; }
@@ -83,7 +82,7 @@ main { max-width: 980px; margin: 0 auto; padding: 12px 16px 110px; }
 .list .card { padding: 12px 14px; margin-bottom: 22px; }
 .list .card:last-child { margin-bottom: 0; }
 .list h2 { font-size: .8rem; margin: 4px 0 6px; }
-.list p { font-size: 1.25rem; margin: 0 0 8px; display: -webkit-box; -webkit-line-clamp: 2; line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.list p { font-size: 1.45rem; margin: 0 0 8px; display: -webkit-box; -webkit-line-clamp: 2; line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
 @media (max-width: 720px) { .cols { grid-template-columns: 1fr; } .pic { min-height: 220px; } }
 
 /* ---------- tarjetas y textos ---------- */
@@ -92,22 +91,34 @@ main { max-width: 980px; margin: 0 auto; padding: 12px 16px 110px; }
 .ev.now { background: #d8ecff; box-shadow: inset 0 0 0 4px var(--blue); }
 .ev h2 { margin: 6px 0; }
 .ev p { margin: 0; }
-.meta { font-size: 1.1rem; color: var(--muted); }
-h2, h1 { font-family: "Press Start 2P", "Courier New", monospace; font-weight: 400; line-height: 1.6; margin: 8px 0 12px; }
+.meta { font-size: 1.25rem; color: var(--muted); }
+h2, h1 { font-family: "Press Start 2P", "Courier New", monospace; font-weight: 400; line-height: 1.6; margin: 8px 0 12px; overflow-wrap: anywhere; hyphens: auto; }
 h2 { font-size: .95rem; }
 h1 { font-size: 1.15rem; }
 h2 a { color: var(--ink); text-decoration: none; }
 h2 a:hover { color: var(--red); }
-p { margin: 0 0 12px; font-size: 1.3rem; }
+p { margin: 0 0 12px; font-size: 1.5rem; }
 
 /* ---------- botones ---------- */
 .btn { display: inline-flex; align-items: center; gap: 6px; min-height: 44px; background: var(--blue); color: #fff; border: 4px solid var(--ink); box-shadow: 4px 4px 0 var(--ink); padding: 10px 16px; text-decoration: none; font-family: "Press Start 2P", "Courier New", monospace; font-size: .7rem; }
 .btn:active { transform: translate(4px, 4px); box-shadow: none; }
 .btn.g { background: var(--gold); color: var(--ink); margin-bottom: 20px; }
 
-/* ---------- pie fijo sobre la nieve ---------- */
-footer { position: fixed; left: 0; right: 0; bottom: 0; height: 44px; z-index: 3; display: flex; align-items: flex-end; justify-content: center; padding-bottom: 12px; margin: 0; text-align: center; color: var(--ink); font-size: clamp(1rem, 3.4vw, 1.2rem); white-space: nowrap; pointer-events: none; }
-@media (max-width: 480px) { footer { white-space: normal; padding: 0 10px 4px; line-height: 1.05; text-wrap: balance; } }
+/* ---------- pie: forma parte de la decoración inferior ----------
+   Va al final de la página, justo sobre la franja de nieve del fondo. Ya no es fijo,
+   así que nunca flota por encima de las entradas ni tapa nada al hacer scroll. */
+footer { flex: none; min-height: 44px; display: flex; align-items: flex-end; justify-content: center; padding: 0 16px 12px; margin: 0; text-align: center; color: var(--ink); font-size: clamp(1.1rem, 3.6vw, 1.35rem); line-height: 1.15; text-wrap: balance; }
+@media (max-width: 480px) { footer { padding: 0 72px 5px; line-height: 1.05; } }
+@media (max-width: 360px) { footer { padding: 0 52px 5px; } }
+
+/* ---------- cita (sección Normas) ---------- */
+.quote { margin: 22px auto 8px; max-width: 34em; text-align: center; }
+.quote blockquote { margin: 0; padding: 26px 20px; border: 4px solid var(--ink); background: #fff; box-shadow: inset 0 0 0 4px #d8ecff; }
+.quote blockquote p { margin: 0; font-size: 1.9rem; line-height: 1.25; }
+.quote figcaption { margin-top: 14px; font-size: 1.45rem; color: var(--muted); }
+
+/* ---------- pantallas pequeñas: títulos más ajustados para que no se corten ---------- */
+@media (max-width: 420px) { h1 { font-size: .95rem; } h2 { font-size: .8rem; } .quote blockquote p { font-size: 1.65rem; } }
 
 /* ---------- página 404 ---------- */
 .nf { max-width: 640px; margin: 0 auto; }

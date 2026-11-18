@@ -1,0 +1,21 @@
+LICENCIA DE LAS FUENTES DE STARAFK
+==================================
+
+Esta web usa dos tipografías libres de Google Fonts, ambas bajo la
+SIL Open Font License, Version 1.1 (uso libre, también comercial, y se pueden
+alojar en tu propio sitio):
+
+  Press Start 2P  (títulos, encabezados, barra y botones)
+    Copyright 2012 The Press Start 2P Project Authors (cody@zone38.net),
+    with Reserved Font Name "Press Start 2P".
+
+  VT323  (textos de lectura)
+    Copyright 2011, The VT323 Project Authors (peter.hull@oikoi.com).
+
+Los archivos .ttf son los originales descargados de Google Fonts, sin modificar.
+Los archivos .woff son esos mismos .ttf convertidos a formato web (más ligero),
+sin cambiar el diseño de las letras.
+
+El texto completo de la licencia está en:  https://openfontlicense.org
+(Si lo prefieres, puedes añadir aquí el archivo OFL.txt que viene dentro de
+los ZIP de Google Fonts.)

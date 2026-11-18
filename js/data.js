@@ -50,13 +50,13 @@
       intro: 'Todo lo que pasa en Starafk, de un vistazo.',
       html: '<div class="ev now"><div class="meta">EVENTO ACTUAL</div><h2>❄ Invierno</h2><p>Del 15 de noviembre al 9 de diciembre</p></div><div class="ev"><div class="meta">PRÓXIMO EVENTO</div><h2>✦ Navidad</h2><p>Del 10 de diciembre al 30 de enero</p></div>'
     },
-    { id: 'usuarios', title: 'Usuarios', intro: 'Conoce a los miembros de Starafk. Pronto tendremos aquí la lista de la comunidad.' },
+    { id: 'miembros', alias: 'usuarios', title: 'Miembros', intro: 'Conoce a los miembros de Starafk. Pronto tendremos aquí la lista de la comunidad.' },
     { id: 'comentarios', title: 'Comentarios', intro: 'El rincón para opinar y charlar con el resto de la comunidad. ¡Próximamente!' },
     {
       id: 'normas',
       title: 'Normas',
-      intro: 'Las reglas de Starafk:',
-      html: '<div class="ev"><h2>1. Respeto</h2></div><div class="ev"><h2>2. Libertad</h2></div><div class="ev"><h2>3. Ausentarse con bondad</h2></div>'
+      intro: '',
+      html: '<figure class="quote"><blockquote><p>«Este es de los nuestros y aquel es un extraño: así piensan los de mente estrecha. Para quienes tienen el corazón generoso, el mundo entero es una sola familia.»</p></blockquote><figcaption>— Proverbio de la India (Vasudhaiva Kutumbakam)</figcaption></figure>'
     },
     { id: 'galeria', title: 'Galería', intro: 'Las mejores capturas y momentos de los Klunefans. ¡Pronto verás aquí la galería!' },
     { id: 'avatares', title: 'Avatares', intro: 'Muestra tu avatar y descubre los de otros Klunefans. ¡Próximamente!' },
@@ -68,7 +68,7 @@
   SF.nav = [
     ['inicio', 'Inicio'],
     ['eventos', 'Eventos'],
-    ['usuarios', 'Usuarios'],
+    ['miembros', 'Miembros'],
     ['comentarios', 'Comentarios'],
     ['galeria', 'Galería'],
     ['premios', 'Premios'],
