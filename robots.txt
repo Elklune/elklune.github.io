@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Cuando estén definidas las páginas definitivas y exista el dominio, activar:
+# Sitemap: https://elklune.github.io/sitemap.xml

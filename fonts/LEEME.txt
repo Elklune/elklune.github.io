@@ -1,0 +1,11 @@
+CARPETA DE FUENTES (letras pixeladas de Starafk)
+
+Ahora mismo esta carpeta esta vacia a proposito: las letras pixeladas
+(Press Start 2P y VT323) todavia no se han incorporado. La web funciona igual,
+pero se ve con una letra normal de sustitucion.
+
+Cuando se incorporen, aqui iran estos archivos:
+  PressStart2P-Regular.ttf
+  VT323-Regular.ttf
+Ambas fuentes tienen licencia libre SIL Open Font License 1.1 (se pueden usar
+y alojar en tu propia web, tambien gratis).
